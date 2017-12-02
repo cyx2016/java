@@ -1,5 +1,0 @@
-
-
-@Service
-public class FunctionService {
-}
