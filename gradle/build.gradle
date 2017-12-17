@@ -12,3 +12,43 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+task helloWorld << {
+    println "Hello World!"
+}
+
+/*比如，我们可以定义一个用于文件拷贝的Task：*/
+task copyFile(type: Copy) {
+    from 'xml'
+    into 'destination'
+}
+task hello2 {
+    doLast {
+        println 'hello2'}
+}
+
+task showTasks {
+    println tasks.class
+    println tasks.size()
+}
+
+task hello5(dependsOn:hello2) << {
+    println 'hello5'
+}
+
+/*从sourceDir目录中读取所有的文件，然后将每个文件的内容合并到destination.txt文件中*/
+task combineFileContentNonIncremental {
+    def sources = fileTree('src')
+
+    def destination = file('destination.txt')
+
+    inputs.dir sources
+    outputs.file destination
+
+    doLast {
+        destination.withPrintWriter { writer ->
+            sources.each {source ->
+                writer.println source.text
+            }
+        }
+    }
+}
