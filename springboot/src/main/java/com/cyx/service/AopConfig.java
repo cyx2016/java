@@ -1,14 +1,13 @@
-package com.cyx.learnBoot;
+package com.cyx.service;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.stereotype.Component;
 
 //≈‰÷√¿‡
 @Configuration
 //@ComponentScan("com.cyx.learnBoot")
 @ComponentScan("com.cyx.service")
 @EnableAspectJAutoProxy
-public class DiConfig {
+public class AopConfig {
 }

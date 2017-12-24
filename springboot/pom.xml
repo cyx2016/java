@@ -157,11 +157,17 @@
       <artifactId>commons-codec</artifactId>
       <version>1.9</version>
     </dependency>
+    <dependency>
+      <groupId>aopalliance</groupId>
+      <artifactId>aopalliance</artifactId>
+      <version>1.0</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/aspectj/aspectjweaver -->
     <dependency>
-      <groupId>aspectj</groupId>
+      <groupId>org.aspectj</groupId>
+      <!--<groupId>aspectj</groupId>-->
       <artifactId>aspectjweaver</artifactId>
-      <version>1.5.4</version>
+      <version>1.8.9</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
     <dependency>
